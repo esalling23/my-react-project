@@ -21,7 +21,7 @@ class ExampleIndex extends Component {
     const examples = this.state.examples.map(example => {
       return (
         <div key={example.id}>
-          {example.text}
+          <Link to={`/examples/${example.id}/show`}>{example.text}</Link>
         </div>
       )
     })
