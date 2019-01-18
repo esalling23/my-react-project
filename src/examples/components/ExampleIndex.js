@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom'
 import { examplesIndex } from '../api'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
+import '../Example.scss'
 
 class ExampleIndex extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class ExampleIndex extends Component {
       <div>
         <h1>Examples</h1>
         {examples}
+        <Link className='create-link' to='/examples-create'>Create New Example</Link>
       </div>
     )
   }

@@ -10,6 +10,7 @@ import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
 import ExampleIndex from './examples/components/ExampleIndex'
 import ExampleShow from './examples/components/ExampleShow'
+import ExampleCreate from './examples/components/ExampleCreate'
 
 class App extends Component {
   constructor () {
@@ -63,6 +64,10 @@ class App extends Component {
           {/* add an authenticated route for our examples show component */}
           <AuthenticatedRoute user={user} exact path='/examples/:id/show' render={() => (
             <ExampleShow flash={this.flash} user={user} />
+          )} />
+          {/* add an authenticated route for our examples create component */}
+          <AuthenticatedRoute user={user} exact path='/examples-create' render={() => (
+            <ExampleCreate flash={this.flash} user={user} />
           )} />
         </main>
       </React.Fragment>
